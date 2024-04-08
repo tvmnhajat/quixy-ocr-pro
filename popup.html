@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        height: 50px;
+        width: 190px;
+        margin: 5px;
+        font-family: "Poppins";
+        background-color: white;
+      }
+
+      main {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 6px 6px 6px;
+        box-sizing: border-box;
+        border-radius: 6px;
+      }
+
+      #ocr_language_select {
+        height: 33px;
+        width: 150px;
+        min-width: 150px;
+        font-family: "Poppins";
+        font-size: 16px;
+        border: none;
+        outline: 0;
+        border-bottom: 1px solid #034ea2;
+        color: #034ea2;
+        padding-left: 3px;
+      }
+
+      button {
+        font-size: 17px;
+        font-weight: bold;
+        height: 33px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: #034ea2;
+        color: #fefeff;
+        border: none;
+        border-radius: 5px;
+        margin-top: 6px;
+      }
+
+      button:active {
+        box-shadow: 0 0 1px 1px #034ea2;
+      }
+
+      #ocr_img {
+        height: 23px;
+        width: 23px;
+        margin-left: 8px;
+      }
+
+      .quixy_ocr_popup_dropdown_content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        width: 150px;
+        max-height: 90px;
+        overflow: auto;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        padding: 6px;
+        box-sizing: border-box;
+        border: 1px solid #034ea2;
+        border-radius: 6px;
+      }
+
+      .quixy_ocr_popup_dropdown_content > div {
+        color: #034ea2;
+        display: block;
+        padding-left: 10px;
+        line-height: 25px;
+        cursor: pointer;
+      }
+
+      .quixy_ocr_popup_dropdown_content > div:hover {
+        background-color: #ddd;
+        color: #034ea2;
+      }
+
+      .quixy_ocr_popup_dropdown_content_show {
+        display: block;
+      }
+
+      .quixy_ocr_popup_dropdown_content::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        border-left: 4px solid #034ea2;
+        background-clip: padding-box;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div id="ocr_language">
+        <div id="quixy_ocr_popup_dropdown">
+          <div id="quixy_ocr_popup_dropbtn">
+            <span id="vie" class="selected_ocr_language"></span>
+          </div>
+        </div>
+      </div>
+      <button id="crop_btn">
+        Select an area<img
+          id="ocr_img"
+          src="./static/icons/OCR_White.png"
+          alt=""
+        />
+      </button>
+    </main>
+    <script src="./popup_script.js"></script>
+  </body>
+</html>
